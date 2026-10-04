@@ -72,3 +72,11 @@ Spring Boot 웹 애플리케이션의 수동 배포와 GitHub Actions를 활용�
 - GitHub Marketplace에서 제공되는 Action을 활용하는 방법
 - GitHub Secrets를 이용한 민감한 정보의 관리
 - GitHub Actions를 활용하여 EC2에 애플리케이션을 자동으로 배포하는 방법
+
+
+
+## 5. 개선해야 할 점
+
+- 애플리케이션 관련 파일이 변경된 경우에만 Workflow가 실행되도록 개선
+- GitHub Actions Runner에서 애플리케이션 빌드 및 테스트 수행
+- 빌드가 완료된 결과물만 EC2에 배포하도록 개선
