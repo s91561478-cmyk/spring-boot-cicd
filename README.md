@@ -68,11 +68,7 @@ Spring Boot 웹 애플리케이션의 수동 배포와 GitHub Actions를 활용�
 
 ## 4. 배운 점
 
-- 수동 배포와 자동 배포의 차이
-- CI/CD를 통한 반복적인 빌드 및 배포 작업 자동화
-- GitHub Actions Workflow의 기본 구조와 동작 과정
-- GitHub Marketplace에서 제공되는 Action 활용
-- uses를 이용한 외부 Action 재사용
-- GitHub Secrets를 이용한 민감한 정보 관리
-- GitHub Actions를 이용한 EC2 자동 배포 과정
-- GitHub Actions Runner에서 Build/Test 후 결과물을 배포하는 방식의 필요성
+- 애플리케이션 코드 변경 시 수동 배포와 자동 배포의 동작 차이
+- GitHub Marketplace에서 제공되는 Action을 활용하는 방법
+- GitHub Secrets를 이용한 민감한 정보의 관리
+- GitHub Actions를 활용하여 EC2에 애플리케이션을 자동으로 배포하는 방법
