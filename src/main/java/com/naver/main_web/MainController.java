@@ -8,6 +8,6 @@ public class MainController {
 
     @GetMapping("/")
     public String home() {
-        return "Google Main Web Page";
+        return "Yahoo Main Web Page";
     }
 }
