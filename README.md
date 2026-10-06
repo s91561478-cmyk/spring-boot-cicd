@@ -32,6 +32,14 @@ Spring Boot 웹 애플리케이션의 수동 배포와 GitHub Actions를 활용�
 
 📌 [상세 실습 기록 - GitHub Actions를 이용한 자동 배포](https://blog.naver.com/siksikhanjapenlife/224431219389)
 
+### 1-4. GitHub Actions Runner에서 애플리케이션 빌드 및 배포
+
+- GitHub Actions Runner에서 Spring Boot 애플리케이션 테스트 및 빌드
+- 빌드된 JAR 파일을 SCP를 이용하여 EC2로 전송
+- EC2에서는 빌드 작업을 수행하지 않고 전달받은 JAR 파일만 실행
+- 빌드 환경과 서비스 실행 환경 분리
+
+📌 [상세 실습 기록 - GitHub Actions를 이용한 자동 배포](https://blog.naver.com/siksikhanjapenlife/224433229790)
 
 
 ## 2. 학습 목표
@@ -39,6 +47,7 @@ Spring Boot 웹 애플리케이션의 수동 배포와 GitHub Actions를 활용�
 - 수동 배포와 자동 배포의 차이점 및 CI/CD가 필요한 이유
 - GitHub Actions Workflow의 기본 구조와 동작 과정
 - GitHub Actions를 이용한 Spring Boot 웹 애플리케이션의 빌드 및 배포 자동화
+- GitHub Actions Runner와 EC2의 역할을 분리하여 빌드 및 배포하는 방법
 
 
 
@@ -66,17 +75,31 @@ Spring Boot 웹 애플리케이션의 수동 배포와 GitHub Actions를 활용�
 
 
 
+### 3-3. GitHub Actions Runner에서 애플리케이션 빌드 후 자동 배포
+
+GitHub Repository에 코드가 Push되면 GitHub Actions Runner에서 애플리케이션을 테스트 및 빌드하고 생성된 JAR 파일을 EC2로 전송하여 배포
+
+![Runner 빌드](images/Runner빌드.png)
+
+**개발자** : 코드 수정 → git push
+
+**GitHub Actions Runner** : Repository Checkout → Test → Build → JAR 생성 → SCP 전송
+
+**EC2** : 기존 애플리케이션 종료 → 새로운 JAR 실행
+
+
 ## 4. 배운 점
 
 - 애플리케이션 코드 변경 시 수동 배포와 자동 배포의 동작 차이
 - GitHub Marketplace에서 제공되는 Action을 활용하는 방법
 - GitHub Secrets를 이용한 민감한 정보의 관리
 - GitHub Actions를 활용하여 EC2에 애플리케이션을 자동으로 배포하는 방법
+- GitHub Actions Runner에서 애플리케이션을 테스트 및 빌드하는 방법
+- 빌드 환경과 서비스 실행 환경을 분리하는 이유
 
 
 
 ## 5. 개선해야 할 점
 
+- 애플리케이션 배포 과정에서 발생하는 서비스 중단을 최소화하거나 제거
 - 애플리케이션 관련 파일이 변경된 경우에만 Workflow가 실행되도록 개선
-- GitHub Actions Runner에서 애플리케이션 빌드 및 테스트 수행
-- 빌드가 완료된 결과물만 EC2에 배포하도록 개선
