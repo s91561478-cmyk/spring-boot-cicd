@@ -39,7 +39,7 @@ Spring Boot 웹 애플리케이션의 수동 배포와 GitHub Actions를 활용�
 - EC2에서는 빌드 작업을 수행하지 않고 전달받은 JAR 파일만 실행
 - 빌드 환경과 서비스 실행 환경 분리
 
-📌 [상세 실습 기록 - GitHub Actions를 이용한 자동 배포](https://blog.naver.com/siksikhanjapenlife/224433229790)
+📌 [상세 실습 기록 - GitHub Actions Runner에서 애플리케이션 빌드 및 배포](https://blog.naver.com/siksikhanjapenlife/224433229790)
 
 
 ## 2. 학습 목표
