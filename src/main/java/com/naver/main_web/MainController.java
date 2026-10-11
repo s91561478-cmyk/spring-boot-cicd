@@ -8,6 +8,6 @@ public class MainController {
 
     @GetMapping("/")
     public String home() {
-        return "Yahoo Main Web Page";
+        return "Naver Main Web Page";
     }
 }
